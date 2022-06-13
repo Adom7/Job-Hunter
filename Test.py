@@ -1,9 +1,15 @@
-from ast import If
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
+
+driver = webdriver.Chrome(ChromeDriverManager().install())
+driver.maximize_window()
+driver.get("http://www.facebook.com")
+print("Application title is", driver.title)
 
 print('Hello World !')
 
-User = input('Choose Option 1 or 2 ')
+User = input('Choose Option 1 or 2 \n')
 
 
 def sfy(option):
