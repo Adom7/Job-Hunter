@@ -70,6 +70,7 @@ def check_exists_CSS(xpath):
     return True
 
 
+print(len(all_jobs))
 for jobs in all_jobs:
 
     print('Job Called')
