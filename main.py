@@ -16,12 +16,13 @@ load_dotenv()
 LinkedIn_EmailAddress = os.getenv("LINKEDIN_EMAIL")
 LinkedIn_Password = os.getenv("LINKEDIN_PASSWORD")
 Phone_Number = os.getenv("PHONE_NUMBER")
+Jobs_Url = os.getenv('JOBS_URL')
 
 
 driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options=opts)
 
 
-driver.get('https://www.linkedin.com/jobs/search/?f_AL=true&f_E=2&f_JT=F%2CC&f_TPR=r2592000&geoId=90009659&keywords=Developpeur%20web&location=Paris%20et%20p%C3%A9riph%C3%A9rie&sortBy=R')
+driver.get(Jobs_Url)
 
 # This Part is only to connect to LinkedIn and get set on the job hunting page 🤖🎯
 
@@ -101,10 +102,11 @@ for jobs in all_jobs:
             progress_bar = driver.find_element_by_css_selector(
                 '.artdeco-completeness-meter-linear__progress-element')
             if progress_bar.get_attribute('value') != 50:
+                time.sleep(1)
                 close_button = driver.find_element_by_css_selector(
                     '.artdeco-button--circle')
                 close_button.click()
-                time.sleep(2)
+                time.sleep(1)
                 delete_button = driver.find_element_by_css_selector(
                     '.artdeco-modal__confirm-dialog-btn')
                 delete_button.click()
