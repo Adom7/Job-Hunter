@@ -55,6 +55,8 @@ All_Jobs = driver.find_elements_by_class_name('job_seen_beacon')
 print(len(All_Jobs))
 
 '''
+ANCHOR EXPLANATIONS
+
 🇫🇷
 Sur indeed Il y a 2 grand types de candidatures
     Les Candidatures à remplir Sur un site externe -- Que nous ne couverons pas (Peux - être dans une futur MAJ)
@@ -65,3 +67,6 @@ On Indeed 2 major types of job propositions
     The One that send us to another website -- We Will not cover this jobs
     The One that continues on Indeed --
 '''
+
+# 'Postuler sur indeed' -- find_element_by_id('indeedApplyButton')
+# "Continuer pour postuler" -- find_element_by_class_name('jobsearch-CallToApply-applyButton-newDesign')
