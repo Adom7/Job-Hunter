@@ -87,9 +87,7 @@ for jobs in all_jobs:
         phone_input.clear()
         # we clear the phone number to avoid pre-saved phone number to mess up the input
         phone_input.send_keys(Phone_Number)
-        print(check_exists_CSS('.ph5'))
         if check_exists_CSS('.ph5') == False:
-            print('Check CSS False')
             check_box = driver.find_element_by_css_selector('.ember-checkbox')
             check_box.click('Uncheck')
             submit_button = driver.find_element_by_css_selector(
