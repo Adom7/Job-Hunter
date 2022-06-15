@@ -1,4 +1,3 @@
-.gitignore
-.env
-OldWaytemp.py
-Test.py
+.gitignore/
+.env/
+Test.py/
