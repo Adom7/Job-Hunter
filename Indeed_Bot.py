@@ -105,7 +105,7 @@ for job in All_Jobs:
             Confirm_Button.click()
             time.sleep(1)
     except NoSuchElementException:
-        print("Job Post Outside of LinkedIn, Aborted")
+        print("Job Post Outside of Indeed, Aborted")
     continue
 
 
